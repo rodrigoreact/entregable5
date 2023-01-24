@@ -1,0 +1,15 @@
+import { configureStore } from "@reduxjs/toolkit";
+import usernameSlice from './slices/username.slice'
+import counterSlice from './slices/counter.slice'
+
+
+export default configureStore({
+  reducer: {
+    counter: counterSlice,
+    username: usernameSlice,    
+  },
+});
+
+
+
+
