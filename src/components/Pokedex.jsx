@@ -41,14 +41,16 @@ const Pokedex = () => {
     }
 
     return (
-        <div>
+        <div style={{textAlign: 'center'}} >
             
             <h1>Bienvenido a la pokedex</h1>
-            <p>Hola {username}, aca podrás encontrar tus Pokemones favoritos!</p>
-            <input type="text" value={search} onChange={e => setSearch(e.target.value)} />
-            <button onClick={pokemonSelected}>Search</button>
+            <p >Hola <span>{username}</span> , aca podrás encontrar tus Pokemones favoritos!</p>
+           
+            <input type="text" placeholder=' Buscar pokemon por nombre'  value={search} onChange={e => setSearch(e.target.value)} className="inp" />
+            <button onClick={pokemonSelected} className="btn">Search</button>
+        
             <Sugestions suggestions={suggestions} setSearch={setSearch} />
-            <GetPokemons pokemons={pokemons} setPokemons={setPokemons}/>
+            <GetPokemons pokemons={pokemons} setPokemons={setPokemons} />
         </div>
     );
 };

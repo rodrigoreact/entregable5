@@ -20,9 +20,12 @@ const Card = ({ url }) => {
   };
 
   return (
-    <div onClick={() => navigate(`/pokedex/${pokemon.id}`)}>
-      pokemon: {pokemon.name}
-      <img width={"100px"} src={getImage()} alt="" />
+    <div className="cards__container">    
+      <div onClick={() => navigate(`/pokedex/${pokemon.id}`)} className="card">
+ 
+         pokemon: {pokemon.name}
+        <img width={"100px"} src={getImage()} alt="" />
+      </div>
     </div>
   );
 };

@@ -10,7 +10,7 @@ const ByType = ({getPokemonsType}) => {
     }, [])
 
     return (
-        <select name="" id="" onChange={e => getPokemonsType(e.target.value)}>
+        <select name="" id="" onChange={e => getPokemonsType(e.target.value)} style={{textAlign: 'center'}} className="allpoke">
             <option default value="https://pokeapi.co/api/v2/pokemon/?offset=0&limit=1279">AllPokemons</option>
             {
                 pokemonsType.map((obj) => (
